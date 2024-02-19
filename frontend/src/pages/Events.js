@@ -15,16 +15,16 @@ function EventsPage() {
 export default EventsPage;
 
 export async function loader() {
-  const response = await fetch("http://localhost:8080/eventssss");
+  const response = await fetch("http://localhost:8080/events");
 
   if (!response.ok) {
     // ...
-    // return { isError: true, message: "Could not fetch Events" };
+    // 1.  return { isError: true, message: "Could not fetch Events" };
 
-    // throw new Error("Could not fetch Events");
+    // 2. throw new Error("Could not fetch Events");
     // it will render the nearest error element
 
-    // throw new response(JSON.stringify({ messgae: "Could not fetch events" }), {
+    // 3. throw new response(JSON.stringify({ messgae: "Could not fetch events" }), {
     //   status: 500,
     // });
 

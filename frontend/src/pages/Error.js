@@ -18,7 +18,6 @@ function Error() {
     <>
       <PageContent title={title}>
         <p>{message}</p>
-        <p>Please try again later.</p>
       </PageContent>
     </>
   );
