@@ -6,7 +6,9 @@ function EventRoot() {
   return (
     <>
       <EventsNavigations />
-      <Outlet></Outlet>
+      <main>
+        <Outlet />
+      </main>
     </>
   );
 }
