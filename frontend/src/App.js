@@ -1,7 +1,7 @@
 import Home from "./pages/Home";
 import Events, { loader as eventsLoader } from "./pages/Events";
 import EventDetail from "./pages/EventDetail";
-import NewEvent from "./pages/NewEvent";
+import NewEvent, { action as newEventAction } from "./pages/NewEvent";
 import EditEvent from "./pages/EditEvent";
 import Error from "./pages/Error.js";
 import Root from "./RootPage/root.js";
@@ -39,7 +39,11 @@ const router = createBrowserRouter([
             ],
           },
 
-          { path: "new", element: <NewEvent /> },
+          {
+            path: "new",
+            element: <NewEvent />,
+            action: newEventAction,
+          },
         ],
       },
     ],

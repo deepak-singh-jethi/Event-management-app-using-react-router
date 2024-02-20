@@ -1,11 +1,11 @@
 {
-  "events": [
-    {
-      "id": "e1",
-      "title": "A dummy event",
-      "date": "2023-02-22",
-      "image": "https://blog.hubspot.de/hubfs/Germany/Blog_images/Optimize_Marketing%20Events%20DACH%202021.jpg",
-      "description": "Join this amazing event and connect with fellow developers."
-    }
-  ]
+    "events": [
+        {
+            "title": "ewd",
+            "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/42/Temp_plate.svg/1202px-Temp_plate.svg.png",
+            "date": "2024-02-22",
+            "description": "assdcsadca",
+            "id": "0e06069f-e262-4189-a9d5-ff91f2cbb69d"
+        }
+    ]
 }
