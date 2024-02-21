@@ -9,6 +9,9 @@ import EditEvent from "./pages/EditEvent";
 import Error from "./pages/Error.js";
 import Root from "./RootPage/root.js";
 import EventRoot from "./pages/EventRoot.js";
+import NewsletterPage, {
+  action as newsLetterAction,
+} from "./pages/Newsletter.js";
 
 import { RouterProvider, createBrowserRouter } from "react-router-dom";
 
@@ -48,6 +51,11 @@ const router = createBrowserRouter([
             action: newEventAction,
           },
         ],
+      },
+      {
+        path: "newsletter",
+        element: <NewsletterPage />,
+        action: newsLetterAction,
       },
     ],
   },

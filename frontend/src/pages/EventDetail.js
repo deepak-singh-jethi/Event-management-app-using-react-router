@@ -9,6 +9,8 @@ import EventItem from "../components/EventItem";
 
 function EventDetail() {
   // const data = useLoaderData();
+  // useRouteLoaderData("event-detail") enables children to use loader of parent
+
   const data = useRouteLoaderData("event-detail");
   const event = data.event;
   return (
@@ -20,6 +22,7 @@ function EventDetail() {
 
 export default EventDetail;
 
+// this loader is used by both eventdetail page and edit event page
 export async function loader({ request, params }) {
   const id = params.eventId;
   const response = await fetch("http://localhost:8080/events/" + id);
@@ -34,6 +37,7 @@ export async function loader({ request, params }) {
   }
 }
 
+// this action is used by both eventdetail
 export async function action({ request, params }) {
   const id = params.eventId;
   const response = await fetch("http://localhost:8080/events/" + id, {
