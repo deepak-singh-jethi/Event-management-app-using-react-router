@@ -4,7 +4,7 @@ import EventDetail, {
   loader as EventDetailLoader,
   action as eventDeleteAction,
 } from "./pages/EventDetail";
-import NewEvent, { action as newEventAction } from "./pages/NewEvent";
+import NewEvent from "./pages/NewEvent";
 import EditEvent from "./pages/EditEvent";
 import Error from "./pages/Error.js";
 import Root from "./RootPage/root.js";
@@ -14,6 +14,7 @@ import NewsletterPage, {
 } from "./pages/Newsletter.js";
 
 import { RouterProvider, createBrowserRouter } from "react-router-dom";
+import { action as manipulateEventAction } from "./components/EventForm.js";
 
 const router = createBrowserRouter([
   {
@@ -41,14 +42,18 @@ const router = createBrowserRouter([
                 element: <EventDetail />,
                 action: eventDeleteAction,
               },
-              { path: "edit", element: <EditEvent /> },
+              {
+                path: "edit",
+                element: <EditEvent />,
+                action: manipulateEventAction,
+              },
             ],
           },
 
           {
             path: "new",
             element: <NewEvent />,
-            action: newEventAction,
+            action: manipulateEventAction,
           },
         ],
       },

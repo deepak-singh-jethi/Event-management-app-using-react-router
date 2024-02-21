@@ -8,7 +8,7 @@ function EditEvent() {
 
   const event = data.event;
 
-  return <EventForm event={event}></EventForm>;
+  return <EventForm event={event} method="PATCH"></EventForm>;
 }
 
 export default EditEvent;

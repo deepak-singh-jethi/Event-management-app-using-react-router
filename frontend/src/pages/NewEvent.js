@@ -3,7 +3,7 @@ import EventForm from "../components/EventForm";
 import { json, redirect } from "react-router-dom";
 
 function NewEvent() {
-  return <EventForm />;
+  return <EventForm method="POST" />;
 }
 
 export default NewEvent;
@@ -17,7 +17,7 @@ export default NewEvent;
 //if the server returns an error, the action will return the error response
 //if the server returns a success response, the action will return a redirect response to the events page
 
-export async function action({ request, params }) {
+/* export async function action({ request, params }) {
   const data = await request.formData();
   const eventData = {
     title: data.get("title"),
@@ -43,4 +43,4 @@ export async function action({ request, params }) {
   }
 
   return redirect("/events");
-}
+} */
